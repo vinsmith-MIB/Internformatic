@@ -2,7 +2,9 @@
 
 game development kelompok 3 - Internformatic
 
-Berikut adalah contoh README yang berisi panduan singkat tentang cara menggunakan Git dan Git LFS untuk berkolaborasi dalam proyek Unity di repositori GitHub dengan tautan SSH. Pastikan untuk menyesuaikan README ini sesuai dengan proyek Anda dan informasi spesifik Anda:
+Berikut adalah panduan singkat tentang cara menggunakan Git dan Git LFS untuk berkolaborasi dalam proyek Unity di repositori GitHub dengan tautan SSH. Pastikan untuk menyesuaikan sesuai dengan proyek Anda dan informasi spesifik Anda:
+
+pertama instal git di browser dulu gess
 
 ```markdown
 # Panduan Kolaborasi Proyek Unity Menggunakan Git dan Git LFS
