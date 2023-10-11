@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1653720714}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &120367319
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.639
+  m_FillAmount: 0.64
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masukanLoadingbar: {fileID: 1555372944}
   nilaiSekarang: 0
-  nilaiKecepatan: 60
+  nilaiKecepatan: 100
 --- !u!1 &1570090836
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,7 +504,7 @@ GameObject:
   - component: {fileID: 1570090837}
   - component: {fileID: 1570090840}
   - component: {fileID: 1570090839}
-  - component: {fileID: 1570090838}
+  - component: {fileID: 1570090841}
   m_Layer: 5
   m_Name: tutupan
   m_TagString: Untagged
@@ -531,21 +531,6 @@ RectTransform:
   m_AnchoredPosition: {x: 542.8898, y: -648}
   m_SizeDelta: {x: 3005.783, y: 322.545}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1570090838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570090836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda67afd97b1c704988b12584af5d07d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  masukanLoadingbar: {fileID: 1570090837}
-  nilaiSekarang: 0
-  nilaiKecepatan: 60
 --- !u!114 &1570090839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,7 +556,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0.64
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -584,6 +569,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570090836}
   m_CullTransparentMesh: 1
+--- !u!114 &1570090841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570090836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda67afd97b1c704988b12584af5d07d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masukanLoadingbar: {fileID: 1570090837}
+  nilaiSekarang: 0
+  nilaiKecepatan: 100
 --- !u!1 &1653720714
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +925,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 2103478386}
+  - {fileID: 1653720716}
   - {fileID: 1749714950}
   - {fileID: 120367319}
-  - {fileID: 1653720716}
+  - {fileID: 2103478386}
