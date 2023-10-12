@@ -6,7 +6,7 @@ Berikut adalah panduan singkat tentang cara menggunakan Git dan Git LFS untuk be
 
 pertama instal git di browser dulu gess
 
-```markdown
+
 # Panduan Kolaborasi Proyek Unity Menggunakan Git dan Git LFS
 
 Ini adalah panduan singkat tentang cara berkolaborasi dalam proyek Unity dengan menggunakan Git dan Git LFS. Pastikan Anda telah menginstal Git dan Git LFS di komputer Anda sebelum memulai.
