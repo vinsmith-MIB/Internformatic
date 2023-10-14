@@ -1,33 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
-public class TextTypewriter : MonoBehaviour
+public class TypewriterEffect : MonoBehaviour
 {
-    public float typingSpeed = 0.05f; // Kecepatan animasi ketik (sec per karakter)
-    public string fullText; // Teks lengkap yang akan ditampilkan
+    public TextMeshProUGUI textMeshPro;
+    public string fullText;
+    public float typingSpeed = 0.1f;
 
-    private Text textComponent;
     private string currentText = "";
-    private float timer;
+    private int textIndex = 0;
 
     private void Start()
     {
-        textComponent = GetComponent<Text>();
-        fullText = textComponent.text;
-        textComponent.text = "";
+        StartCoroutine(TypeText());
     }
 
-    private void Update()
+    private IEnumerator TypeText()
     {
-        if (currentText != fullText)
+        while (textIndex < fullText.Length)
         {
-            timer += Time.deltaTime;
-            if (timer >= typingSpeed)
-            {
-                currentText = fullText.Substring(0, currentText.Length + 1);
-                textComponent.text = currentText;
-                timer = 0f;
-            }
+            currentText += fullText[textIndex];
+            textMeshPro.text = currentText;
+            textIndex++;
+
+            yield return new WaitForSeconds(typingSpeed);
         }
     }
 }
