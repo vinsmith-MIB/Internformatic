@@ -1,39 +1,36 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PanelSwitcher : MonoBehaviour
+public class PanelReplacement : MonoBehaviour
 {
-    public GameObject firstPanel;  // Panel pertama yang akan digantikan
-    public GameObject secondPanel; // Panel kedua yang akan ditampilkan
+    public GameObject panelToReplace; // Panel yang akan diganti
+    public GameObject replacementPanel; // Panel pengganti
 
-    private bool isSecondPanelActive = false; // Menandai apakah panel kedua sedang aktif
+    private bool isReplaced = false;
 
-    void Start()
+    private void Start()
     {
-        // Inisialisasi, aktifkan panel pertama dan nonaktifkan panel kedua
-        firstPanel.SetActive(true);
-        secondPanel.SetActive(false);
+        // Pastikan panel pengganti tidak aktif saat permainan dimulai
+        replacementPanel.SetActive(false);
     }
 
-    void Update()
+    public void ReplacePanel()
     {
-        // Cek jika panel pertama diklik
-        if (Input.GetMouseButtonDown(0)) // Anda bisa mengganti dengan event klik yang sesuai dengan kebutuhan Anda
+        if (!isReplaced)
         {
-            // Ganti panel yang aktif berdasarkan status saat ini
-            if (isSecondPanelActive)
-            {
-                firstPanel.SetActive(true);
-                secondPanel.SetActive(false);
-            }
-            else
-            {
-                firstPanel.SetActive(false);
-                secondPanel.SetActive(true);
-            }
+            // Salin posisi dan rotasi dari panel yang akan diganti
+            Vector3 position = panelToReplace.transform.position;
+            Quaternion rotation = panelToReplace.transform.rotation;
 
-            // Ubah status aktif panel
-            isSecondPanelActive = !isSecondPanelActive;
+            // Nonaktifkan panel yang akan diganti
+            panelToReplace.SetActive(false);
+
+            // Aktifkan panel pengganti dengan posisi dan rotasi yang sama
+            replacementPanel.transform.position = position;
+            replacementPanel.transform.rotation = rotation;
+            replacementPanel.SetActive(true);
+
+            isReplaced = true;
         }
     }
 }
