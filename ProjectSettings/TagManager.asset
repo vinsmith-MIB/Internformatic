@@ -5,14 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameMusic
+  - BacksoundMainMenu
+  - Map
+  - BatasCanvas
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - TransparantObject
   - Water
   - UI
-  - 
+  - Karakter
   - 
   - 
   - 

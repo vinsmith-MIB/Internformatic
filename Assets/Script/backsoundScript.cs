@@ -17,17 +17,23 @@ public class MusicController : MonoBehaviour
         musicSource.Play();
     }
 
-    // Fungsi ini akan dipanggil ketika berpindah scene
-    private void OnLevelWasLoaded(int level)
+    private void OnEnable()
     {
-        // Cek jika sudah berada di Scene 2
-        if (level == 2) // Ubah angka ini sesuai dengan indeks Scene 2 di build settings
-        {
-            // Temukan Audio Source di Scene 2 dan lanjutkan pemutaran musik
-            AudioSource scene2MusicSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
-            scene2MusicSource.Play();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.buildIndex > 1) {
+            Destroy(gameObject);
         }
     }
 }
+
 
 

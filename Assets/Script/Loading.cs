@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class loading : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class loading : MonoBehaviour
         }
         else
         {
-            Application.LoadLevel("Main Menu");
+            SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
         }
         masukanLoadingbar.GetComponent<Image>().fillAmount = nilaiSekarang / 1000;
 

@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 1653720717}
   m_Layer: 0
   m_Name: Audio Source
-  m_TagString: GameMusic
+  m_TagString: BacksoundMainMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
