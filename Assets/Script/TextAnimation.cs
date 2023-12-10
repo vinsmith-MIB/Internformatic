@@ -6,6 +6,7 @@ using TMPro;
 public class TypewriterEffect : MonoBehaviour
 {
     public TextMeshProUGUI textMeshPro;
+    public TextMeshProUGUI textMeshPssfasd;
     public string fullText;
     public float typingSpeed = 0.1f;
 

@@ -20,7 +20,7 @@ public class Subnetting : MonoBehaviour
     public NetworkInfo[] arrayNetworkInfo;
     public GameObject papanScore;
     private Dictionary<NetworkInfo, bool> nilaiBooleanDictionary = new Dictionary<NetworkInfo, bool>();
-
+    private WaktuScore scorecomponent;
     void Awake()
     {
         foreach (NetworkInfo nf in arrayNetworkInfo)
@@ -29,8 +29,9 @@ public class Subnetting : MonoBehaviour
         }
     }
 
-    void Start(){
-        ScoreWaktu skor = papanScore.GetComponent<ScoreWaktu>();
+    void Start()
+    {
+        scorecomponent = papanScore.GetComponent<WaktuScore>();
     }
     public void AnswerCheck()
     {
@@ -43,7 +44,6 @@ public class Subnetting : MonoBehaviour
                 transformArray[1] = PanelJawaban[pj].transform.Find("ipbroadcast");
                 transformArray[2] = PanelJawaban[pj].transform.Find("hostpertama");
                 transformArray[3] = PanelJawaban[pj].transform.Find("hostterakhir");
-                Debug.Log(transformArray[0]);
                 foreach (NetworkInfo nf in arrayNetworkInfo)
                 {
                     if (!nilaiBooleanDictionary[nf])
@@ -81,16 +81,18 @@ public class Subnetting : MonoBehaviour
                         {
                             nilaiBooleanDictionary[nf] = true;
                             PanelJawaban[pj].SetActive(false);
-                            if(PanelJawaban[pj+1] != null) {
-                            PanelJawaban[pj + 1].SetActive(true);
+                            if (PanelJawaban[pj + 1] != null)
+                            {
+                                PanelJawaban[pj + 1].SetActive(true);
                             }
                             Transform parentpanel = PanelJawaban[pj].transform.parent;
                             Image parentimage = parentpanel.GetComponent<Image>();
                             parentimage.sprite = newImage;
-                            skor.AddScore(100);
+                            scorecomponent.AddScore(100);
                         }
-                        else{
-                            skor.AddScore(isTrue*10);
+                        else
+                        {
+                            scorecomponent.AddScore(isTrue * 10);
                         }
 
                     }
